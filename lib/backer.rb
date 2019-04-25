@@ -5,13 +5,12 @@ class Backer
     attr_reader  :project
 
     def initialize(name)
-        @name = name 
+        @name = name
         @backed_projects = []
-        # binding.pry
     end
 
     def back_project(project)
-        @backed_projects << project 
+        @backed_projects << project
         project.backers << self
     end
 
